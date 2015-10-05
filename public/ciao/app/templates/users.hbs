@@ -1,0 +1,11 @@
+<h1>Users template</h1>
+
+	<ul>
+  {{#each model.users as |user|}}
+    <li>{{#link-to "user.index" user}}{{user.first_name}}{{/link-to}}</li>
+  {{/each}}
+  </ul>
+
+  {{create-new-user newUser=model.newUser createUser="createUser"}}
+
+{{outlet}}

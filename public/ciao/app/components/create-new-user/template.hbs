@@ -1,0 +1,19 @@
+<h3>Create a new user</h3>
+
+<form>
+  <label>
+    {{input value=newUser.first_name placeholder="First name" required="required"}}
+  </label>
+  <label>
+    {{input value=newUser.last_name placeholder="Last name"}}
+  </label>
+  <label>
+    {{input value=newUser.company placeholder="Company" required="required"}}
+  </label>
+  <label>
+    {{input type="email" value=newUser.email placeholder="Email" required="required"}}
+  </label>
+  <p>
+    <button {{action "createUser" newUser}} type="button">Save</button>
+  </p>
+</form>
